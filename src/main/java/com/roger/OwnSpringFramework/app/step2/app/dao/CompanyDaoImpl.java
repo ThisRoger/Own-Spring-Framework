@@ -1,10 +1,10 @@
-package com.roger.OwnSpringFramework.app.dao;
+package com.roger.OwnSpringFramework.app.step2.app.dao;
 
-import com.roger.OwnSpringFramework.app.model.Company;
+import com.roger.OwnSpringFramework.app.step2.app.model.Company;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CompanyDaoImpl implements CompanyDao{
+public class CompanyDaoImpl implements CompanyDao {
 
     private static final Logger logger = LoggerFactory.getLogger(CompanyDaoImpl.class);
 

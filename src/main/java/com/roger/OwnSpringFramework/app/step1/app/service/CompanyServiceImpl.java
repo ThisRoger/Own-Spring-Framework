@@ -1,9 +1,10 @@
-package com.roger.OwnSpringFramework.app.service;
+package com.roger.OwnSpringFramework.app.step1.app.service;
 
-import com.roger.OwnSpringFramework.app.dao.CompanyDao;
-import com.roger.OwnSpringFramework.app.model.Company;
+import com.roger.OwnSpringFramework.app.step1.app.dao.CompanyDao;
+import com.roger.OwnSpringFramework.app.step1.app.model.Company;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CompanyServiceImpl implements CompanyService {
 
@@ -11,6 +12,7 @@ public class CompanyServiceImpl implements CompanyService {
 
     private final CompanyDao companyDao;
 
+    @Autowired
     public CompanyServiceImpl(CompanyDao companyDao) {
         this.companyDao = companyDao;
     }
