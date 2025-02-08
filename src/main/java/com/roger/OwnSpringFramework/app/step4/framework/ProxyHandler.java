@@ -20,7 +20,7 @@ public class ProxyHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         if (isTransactional(method)) {
-            return hanldeInTransaction(method, args);
+            return handleInTransaction(method, args);
         }
         return calculateResult(method, args);
     }
@@ -33,7 +33,7 @@ public class ProxyHandler implements InvocationHandler {
         }
     }
 
-    private Object hanldeInTransaction(Method method, Object[] args) throws IllegalAccessException, InvocationTargetException {
+    private Object handleInTransaction(Method method, Object[] args) throws IllegalAccessException, InvocationTargetException {
         try {
             beginTransaction();
 
